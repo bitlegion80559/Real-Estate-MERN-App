@@ -3,20 +3,23 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './routes/user.route.js'
 import authRouter from './routes/auth.route.js'
+import connectDB from './db/connectDb.js';
 dotenv.config();
 const app=express();
 app.use(express.json());
-mongoose
-  .connect(process.env.MONGO)
-  .then(() => {
-    console.log('Connected to MongoDB!');
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-app.listen(3000,()=>{
-    console.log("server is runnning on port 3000");
+// mongoose
+//   .connect(process.env.MONGO)
+//   .then(() => {
+//     console.log('Connected to MongoDB!');
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+connectDB();//Database Connection
+app.listen(process.env.PORT,()=>{
+    console.log(`server is runnning on port ${process.env.PORT}`);
 });
+
+// routes
 app.use('/api/user',userRouter);
 app.use('/api/auth',authRouter);
