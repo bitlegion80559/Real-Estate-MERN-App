@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import OAuth from '../components/OAuth';
 export default function SignUp() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData,setFormData]=useState({});
@@ -25,7 +25,7 @@ export default function SignUp() {
   const handleSubmit = async (e) => {
    e.preventDefault();
     setIsSubmitting(true);
-    e.preventDefault();
+   // e.preventDefault();
     try {
       setLoading(true);
       const res = await fetch('/api/auth/signup', {
@@ -87,6 +87,7 @@ export default function SignUp() {
           >
             {loading ? 'Submitting...' : 'Submit'}
           </button>
+          <OAuth/>
           {error && <p className='text-red-500 mt-5'>{error}</p>}
         </form>
         <div className='flex justify-center gap-2 mt-6 text-gray-800'>
