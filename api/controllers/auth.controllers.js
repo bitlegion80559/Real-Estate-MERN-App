@@ -4,6 +4,8 @@ import jwt from 'jsonwebtoken';
 import User from '../models/user.model.js';
 import { errorHandler } from '../utils/error.js';
 
+//Signup
+
 export const signup=async(req,res,next)=>{
     console.log(req.body);
     const {username,email,password}=req.body;
@@ -16,6 +18,9 @@ export const signup=async(req,res,next)=>{
         next(error)
     };
 };
+
+//Sign In
+ 
 export const signin = async (req, res, next) => {
     const { email, password } = req.body;
     try {
@@ -33,6 +38,9 @@ export const signin = async (req, res, next) => {
       next(error);
     }
   };
+
+  //Google authentication
+
   export const google = async (req, res, next) => {
     try {
       const user = await User.findOne({ email: req.body.email });
