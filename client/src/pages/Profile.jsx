@@ -236,9 +236,12 @@ export default function Profile() {
       <p className='text-green-700 mt-5'>
         {updateSuccess ? 'User is updated successfully!' : ''}
       </p>
-      <button onClick={handleShowListings} className='text-green-700 w-full'>
-        Show Listings
-      </button>
+      <div className="flex justify-center">
+  <button onClick={handleShowListings} className="bg-black hover:bg-slate-600 text-white font-bold py-2 px-4 rounded-lg">
+    Show Listings
+  </button>
+</div>
+
       <p className='text-red-700 mt-5'>
         {showListingsError ? 'Error showing listings' : ''}
       </p>
