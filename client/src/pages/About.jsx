@@ -8,7 +8,7 @@ export default function About() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.7 }}
       className='py-20 px-4 max-w-6xl mx-auto'
     >
       <h1 className='text-4xl font-bold mb-8 text-gray-900'>About Dream Homes</h1>
@@ -31,7 +31,7 @@ export default function About() {
             className="rounded-lg shadow-lg w-full"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.7 }}
           />
         </div>
       </div>
