@@ -154,10 +154,23 @@ export default function CreateListing() {
     }
   };
   return (
+    <div className='bg-blue-950 text-black bg-opacity-15'>
     <main className='p-3 max-w-4xl mx-auto'>
-      <h1 className='text-3xl font-semibold text-center my-7'>
-        Create a Listing
-      </h1>
+      <h1
+   style={{
+    textTransform: 'uppercase',
+    fontSize: 70,
+    fontWeight: 900,
+    textAlign: 'center',
+    backgroundImage: "url('https://tse4.mm.bing.net/th?id=OIP.R3YiXzE2qhmBoNna5cXl1AHaEK&pid=Api&P=0&h=220')",
+    backgroundSize: '100% 100%',
+    color: 'transparent',
+    WebkitBackgroundClip: 'text', 
+  }}
+>
+  Create a Listing
+</h1>
+
       <form onSubmit={handleSubmit} className='flex flex-col sm:flex-row gap-4'>
         <div className='flex flex-col gap-4 flex-1'>
           <input
@@ -374,5 +387,6 @@ export default function CreateListing() {
         </div>
       </form>
     </main>
+    </div>
   );
 }
