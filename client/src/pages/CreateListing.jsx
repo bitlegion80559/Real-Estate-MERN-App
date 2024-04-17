@@ -297,6 +297,9 @@ export default function CreateListing() {
                 {formData.type === 'rent' && (
                   <span className='text-xs'>(₹ / month)</span>
                 )}
+                {formData.type==='sale'&&(
+                  <span className='text-xs'>(₹)</span>
+                )}
               </div>
             </div>
             {formData.offer && (
@@ -317,6 +320,9 @@ export default function CreateListing() {
                   {formData.type === 'rent' && (
                     <span className='text-xs'>(₹ / month)</span>
                   )}
+                  {formData.type==='sale'&&(
+                  <span className='text-xs'>(₹)</span>
+                )}
                 </div>
               </div>
             )}
