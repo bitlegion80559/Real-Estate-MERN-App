@@ -323,7 +323,7 @@ export default function CreateListing() {
           </div>
         </div>
         <div className='flex flex-col flex-1 gap-4'>
-          <p className='font-semibold'>
+          <p className='font-bold'>
             Images:
             <span className='font-normal text-gray-600 ml-2'>
               The first image will be the cover (max 6)
@@ -332,7 +332,17 @@ export default function CreateListing() {
           <div className='flex gap-4'>
             <input
               onChange={(e) => setFiles(e.target.files)}
-              className='p-3 border border-gray-300 rounded w-full'
+              className='file:bg-gradient-to-b file:from-blue-500  file:to-blue-600
+              file:px-6 file:py-3 file:m-5
+              file:border-none
+              file:rounded-full
+              file:text-white
+              file:cursor-pointer
+              file:shadow-lg file:shadow-blue-600/50
+              bg-gradient-to-br from-gray-300 to bg-gray-500
+              text-white/80 
+              rounded-full
+              cursor-pointer'
               type='file'
               id='images'
               accept='image/*'
@@ -342,7 +352,7 @@ export default function CreateListing() {
               type='button'
               disabled={uploading}
               onClick={handleImageSubmit}
-              className='p-3 text-green-700 border border-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80'
+              className='p-3 h-50 w-50 text-green-700 border border-black rounded-xl uppercase hover:shadow-lg disabled:opacity-80'
             >
               {uploading ? 'Uploading...' : 'Upload'}
             </button>
