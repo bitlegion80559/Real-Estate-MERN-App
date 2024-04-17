@@ -4,7 +4,7 @@ import { errorHandler } from '../utils/error.js';
 import Listing from '../models/listing.model.js';
 export const test=(req,res)=>{
   res.json({
-    message:"SUCcESS",
+    message:"SUCCESS",
   });
 };
 

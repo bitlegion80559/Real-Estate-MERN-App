@@ -30,6 +30,12 @@ export default function Profile() {
   const [userListings, setUserListings] = useState([]);
   const dispatch = useDispatch();
 
+  // firebase storage
+  // allow read;
+  // allow write: if
+  // request.resource.size < 2 * 1024 * 1024 &&
+  // request.resource.contentType.matches('image/.*')
+
   useEffect(() => {
     if (file) {
       handleFileUpload(file);
@@ -80,7 +86,7 @@ export default function Profile() {
         dispatch(updateUserFailure(data.message));
         return;
       }
-
+      
       dispatch(updateUserSuccess(data));
       setUpdateSuccess(true);
     } catch (error) {
@@ -236,12 +242,9 @@ export default function Profile() {
       <p className='text-green-700 mt-5'>
         {updateSuccess ? 'User is updated successfully!' : ''}
       </p>
-      <div className="flex justify-center">
-  <button onClick={handleShowListings} className="bg-black hover:bg-slate-600 text-white font-bold py-2 px-4 rounded-lg">
-    Show Listings
-  </button>
-</div>
-
+      <button onClick={handleShowListings} className='text-green-700 w-full'>
+        Show Listings
+      </button>
       <p className='text-red-700 mt-5'>
         {showListingsError ? 'Error showing listings' : ''}
       </p>
