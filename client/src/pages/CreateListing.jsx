@@ -162,7 +162,7 @@ export default function CreateListing() {
     fontSize: 70,
     fontWeight: 900,
     textAlign: 'center',
-    backgroundImage: "url('https://tse4.mm.bing.net/th?id=OIP.R3YiXzE2qhmBoNna5cXl1AHaEK&pid=Api&P=0&h=220')",
+    backgroundImage: "url('/real-estate.jpg')",
     backgroundSize: '100% 100%',
     color: 'transparent',
     WebkitBackgroundClip: 'text', 
