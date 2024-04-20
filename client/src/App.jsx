@@ -11,6 +11,7 @@ import ContactUs from './pages/ContactUs'
 import PrivateRoute from './components/PrivateRoute';
 import UpdateListing from './pages/UpdateListing';
 import Listing from './pages/Listing'
+import Search from './pages/Search'
 const App = () => {
   return (
     <Router>
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/about" element={<About/>}/>
         <Route path="/contact-us" element={<ContactUs/>}/>
         <Route path='/listing/:listingId' element={<Listing/>}/>
+        <Route path='/search' element={<Search/>}/>
         <Route element={<PrivateRoute />}>
           <Route path='/profile' element={<Profile />} />
           <Route path='/create-listing' element={<CreateListing />} />
