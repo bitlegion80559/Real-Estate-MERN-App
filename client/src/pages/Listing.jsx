@@ -93,8 +93,8 @@ export default function Listing() {
             <p className='text-2xl font-semibold'>
               {listing.name} - ₹{' '}
               {listing.offer
-                ? (+listing.regularPrice - +listing.discountPrice + ' (After Discount)')
-                : listing.regularPrice.toLocaleString('en-US')}
+                ? ((+listing.regularPrice - +listing.discountPrice).toLocaleString('en-IN') + ' (After Discount)')
+                : listing.regularPrice.toLocaleString('en-IN')}
               {listing.type === 'rent' && ' / month'}
             </p>
             <p className='flex items-center mt-6 gap-2 text-slate-600  text-sm'>
