@@ -154,7 +154,7 @@ export default function CreateListing() {
     }
   };
   return (
-    <div className='bg-blue-950 text-black bg-opacity-15'>
+    <div id='u1' className='bg-blue-950 text-black bg-opacity-15 min-h-screen'>
     <main className='p-3 max-w-4xl mx-auto'>
       <h1
    style={{
